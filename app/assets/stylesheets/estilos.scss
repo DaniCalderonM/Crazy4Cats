@@ -1,0 +1,26 @@
+body {
+    background-image: url(fondo.jpg);
+    background-size: cover;
+    background-size: 500px 600px;
+}
+
+.tcolor {
+    color: white;
+}
+
+.photo {
+    width: 70%;
+}
+
+div {
+ border-radius: 5%;
+
+}
+
+.tutilo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 700%;
+    text-align: center;
+    // -webkit-text-fill-color: black;
+    -webkit-text-stroke: 2px white;
+}

@@ -1,0 +1,2 @@
+module CfcpostsHelper
+end

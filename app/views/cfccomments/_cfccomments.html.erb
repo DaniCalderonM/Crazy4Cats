@@ -1,0 +1,35 @@
+<div class="card comments mt-3 mb-2">
+  <div class="card-header border-bottom-0 font-weight-bold bg-transparent">Comentarios</div>
+  <ul class="list-group list-group-flush">
+    <% @cfcpost.cfccomments.each do |comment| %>
+      <li class="list-group-item">
+        <header class="comment-header"><strong><i class="fa-solid fa-cat fa-xl" style="color: #930606;">
+        </i><%= (comment.cfcuser.nickname if comment.cfcuser) || "Anonymous" %></strong> wrote <%= distance_of_time_in_words(Time.current, comment.created_at) %> ago</header>
+        <div class="comment-body"><strong><%= comment.content %></strong></div>
+        <%= button_to "Eliminar comentario", comment, method: :delete %>
+      </li>
+    <% end %>
+
+    <% if @cfcpost.cfccomments.empty? %>
+      <li class="list-group-item text-center">Aún no hay comentarios para este post :(</li>
+    <% end %>
+  </ul>
+</div>
+
+  <div class="card bg-light new-comment">
+    <div class="card-body">
+      <p><strong>Deja tu comentario:</strong></p>
+      
+      <%= form_for @cfcpost.cfccomments.build do |f| %>
+        <%= f.hidden_field :cfcpost_id, value: @cfcpost.id %>
+<div>
+    <%= f.label :content, style: "display: block" %>
+    <%= f.text_field :content, class:"form-control" %>
+  </div>
+
+        <div class="text-right">
+          <%= f.submit "Comentar", class: "btn btn-primary mt-2" %>
+        </div>
+        <div>
+        <% end %>
+  </div>

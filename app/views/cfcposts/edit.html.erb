@@ -1,0 +1,12 @@
+<div class="bg-light p-2 text-dark bg-opacity-75" >
+<h1>Editando Publicación</h1>
+
+<%= render "form", cfcpost: @cfcpost %>
+
+<br>
+
+<div>
+  <%= link_to "Mostrar esta publicación", @cfcpost, class:"btn btn-dark" %> |
+  <%= link_to "Volver a Publicaciones", cfcposts_path, class:"btn btn-dark" %>
+</div>
+</div>

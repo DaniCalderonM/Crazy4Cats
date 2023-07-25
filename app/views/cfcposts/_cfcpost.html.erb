@@ -1,0 +1,17 @@
+<div id="<%= dom_id cfcpost %>">
+
+<div class="bg-light p-2 text-dark bg-opacity-75">
+    <div class="text-center ">
+  <p>
+ <%= image_tag cfcpost.image, class:"photo" %>
+  </p>
+
+
+  <p>
+    <strong><i class="fa-sharp fa-solid fa-shield-cat fa-2xl"></i> <%= cfcpost.cfcuser.nickname %> :</strong>
+    <%= cfcpost.description %>
+  </p>
+
+  </div>
+    </div>
+</div>

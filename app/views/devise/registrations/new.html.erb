@@ -1,0 +1,41 @@
+<div class="bg-light p-2 text-dark bg-opacity-75">
+<h2>Registrate</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autocomplete: "Nombre" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nickname %><br />
+    <%= f.text_field :nickname, autocomplete: "Nickname o Alias" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "Nueva Contraseña" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "Nueva Contraseña" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Registrarse" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+ </div>
