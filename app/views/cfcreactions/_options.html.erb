@@ -1,0 +1,14 @@
+<div class="container p-3">
+<i class="fa-regular fa-thumbs-up fa-xl"></i>
+<% Cfcreaction.kinds.each do |kind| %>
+  <%= @cfcpost.cfcreactions.where(kind: kind).count %> 
+ <% end %>
+ <i class="fa-regular fa-thumbs-down fa-xl"></i>
+<div class="d-flex justify-content-center">
+
+ <% Cfcreaction.kinds.each do |kind| %>
+ <%= button_to "#{kind.capitalize}", new_cfcuser_cfcreaction_path(cfcpost_id: @cfcpost.id, kind: kind), class:"btn btn-danger", method: :post %> 
+ <% end %>
+ 
+</div>
+</div>
