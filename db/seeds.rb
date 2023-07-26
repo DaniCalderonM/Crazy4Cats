@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Cfcuser.create(name: "Marcelo", nickname: "Marce.c4c", email: "marcelo@gmail.com", password: "123456", password_confirmation: "123456")
+Cfcuser.create(name: "Danicsa", nickname: "Akiko.ly", email: "mesiasd@gmail.com", password: "123456", password_confirmation: "123456")
+Cfcuser.create(name: "Pedro", nickname: "Pedrocat", email: "pedrito@gmail.com", password: "123456", password_confirmation: "123456")
