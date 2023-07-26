@@ -1,6 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @cfcpost %>
+<div class="m-2">
+<%= link_to "Volver a Publicaciones", cfcposts_path, class:"btn btn-dark"%>
+</div>
 
 <div class="bg-light m-1 p-1 text-dark bg-opacity-75">
 
@@ -17,7 +20,6 @@
   <ul class="dropdown-menu">
       <li><%= button_to "Eliminar esta publicación", @cfcpost, method: :delete %></li>
     <li><%= link_to "Editar esta publicación", edit_cfcpost_path(@cfcpost), class:"dropdown-item"%></li>
-    <li><%= link_to "Volver a Publicaciones", cfcposts_path, class:"dropdown-item"%></li>
   </ul>
 </div>
  <% end %> 

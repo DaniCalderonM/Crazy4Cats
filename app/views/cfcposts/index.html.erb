@@ -1,14 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-
+<div class=" mb-2 ">
+<%= link_to "Crea una nueva publicación  ᵐᵉᵒʷˎˊ˗", new_cfcpost_path, class: "btn btn-success" %>
+</div>
 
 <div id="cfcposts">
   <% @cfcposts.each do |cfcpost| %>
     <%= render cfcpost %>
-    <p>
+    <p class="mt-1">
       <%= link_to "Mostrar esta Publicación", cfcpost, class: "btn btn-dark" %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "Crea una nueva Publicación", new_cfcpost_path, class: "btn btn-success" %>
